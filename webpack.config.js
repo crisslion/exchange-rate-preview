@@ -13,7 +13,7 @@ module.exports = {
   module: {
     rules: [
         {
-            test: /\.(html|txt)$/,
+            test: /\.(ogg|png|html|txt)$/,
             use: [
                 {
                     loader: 'file-loader',
@@ -46,6 +46,10 @@ module.exports = {
   target: "web",
   devServer: {
       contentBase: path.resolve(__dirname, 'dist'),
-      port: 8080
+      port: 8080,
+      hot: false,   
+      watchOptions: {
+        poll: true
+      }
   }
 }
