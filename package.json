@@ -36,9 +36,10 @@
     },
     "scripts": {
         "build": "ENV=prod webpack --config webpack.config.js",
+        "docker": "docker build -t crisslion/typescript-app .",
         "start": "webpack-dev-server",
         "test": "jest",
-        "dist": "yarn run lint && yarn run test && yarn run build",
+        "dist": "yarn run lint && yarn run test && yarn run build && yarn run docker",
         "lint": "tslint -c tslint.json src/**/*.{ts,tsx}"
     }
 }
