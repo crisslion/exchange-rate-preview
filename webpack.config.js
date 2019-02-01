@@ -1,6 +1,11 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const isProd = process.env.ENV === "prod";
+
+console.log("=================");
+console.log(`${isProd ? "Production" : "Development"} build!`);
+console.log("=================");
 
 module.exports = {
   mode: isProd ? "production" : "development",
@@ -27,9 +32,22 @@ module.exports = {
             test: /\.tsx?$/,
             use: 'ts-loader',
             exclude: "/node_modules/"
-        }
+        },
+	{
+            test: /\.css$/,
+	    use: [
+	      MiniCssExtractPlugin.loader,
+	      'css-loader',
+	      'postcss-loader'
+	    ]
+	}
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "style.css"
+    })
+  ],
   resolve: {
     modules: [
       "node_modules",
@@ -39,8 +57,8 @@ module.exports = {
   },
   performance: {
     hints: "warning",
-    maxAssetSize: isProd ? 200000 : 20000000,
-    maxEntrypointSize: isProd ? 400000 : 40000000,
+    maxAssetSize: isProd ? 800000 : 20000000,
+    maxEntrypointSize: isProd ? 800000 : 40000000,
   },
   devtool: "inline-source-map",
   target: "web",
@@ -51,5 +69,6 @@ module.exports = {
       watchOptions: {
         poll: true
       }
-  }
+  },
+  stats: "normal"
 }

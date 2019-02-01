@@ -1,12 +1,17 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { Default } from "./components/default";
+import { HelloWorld } from "./components/default";
+
+import "./style.css";
 
 class App extends React.PureComponent<{}, {}> {
     render() {
         return (
-            <Default />
+	    <div>
+	        asdas
+            	<HelloWorld />
+	    </div>
         );
     }
 }
