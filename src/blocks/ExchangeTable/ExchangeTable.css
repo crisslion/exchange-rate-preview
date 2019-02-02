@@ -1,0 +1,37 @@
+.exchange-table {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.exchange-table__header {
+    border: 1px solid #f4f4f4;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exchange-table__base {
+    padding: 10px;
+    flex-basis: 50%;
+}
+
+.exchange-table__date {
+    padding: 10px;
+    flex-basis: 50%;
+    text-align: right;
+}
+
+.exchange-table__data {
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid #f4f4f4;
+    border-radius: 3px;
+    flex-wrap: wrap;
+}
+
+.exchange-table__data-block {
+    flex-basis: 25%;
+    min-width: 100px;
+    flex-grow: 1;
+}

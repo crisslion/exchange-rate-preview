@@ -67,7 +67,6 @@ module.exports = {
       port: 8080,
       hot: false,   
       watchOptions: {
-        poll: true
       }
   },
   stats: "normal"

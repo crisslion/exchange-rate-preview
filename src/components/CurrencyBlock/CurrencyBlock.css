@@ -1,0 +1,21 @@
+.currency-block {
+    padding: 10px;
+}
+
+.currency-block__container {
+    display: flex;
+    border-top: 3px solid #f4f4f4;
+    flex-direction: column;
+}
+
+.currency-block__name {
+    padding: 10px;
+    margin: 0;
+}
+
+.currency-block__value {
+    padding: 10px;
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+}

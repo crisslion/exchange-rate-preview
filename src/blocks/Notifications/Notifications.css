@@ -1,0 +1,19 @@
+.notifications {
+    border: 1px solid #f4f4f4;
+    padding: 10px;
+    border-radius: 3px;
+    flex-grow: 1;
+}
+
+.notification {
+    margin: 0;
+}
+
+.notification--notify {
+    color: yellow;
+}
+
+.notification--issue {
+    color: red;
+    font-weight: bold;
+}

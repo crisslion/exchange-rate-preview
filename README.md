@@ -1,7 +1,8 @@
-# Crisslions Typescript pan-plate
+# Currency exchange rate preview 
 
 ## What is this?
-This is a basic typescript application
+Simplest way how to check current currency exchange rates on the web!
+Deploy on your own server and enjoy!
 
 ## Requirments
 
