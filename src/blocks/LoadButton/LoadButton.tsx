@@ -1,8 +1,10 @@
 import * as React from "react";
 import { ThunkDispatch } from "redux-thunk";
-import { State } from "../../store/state";
+
 import { connect } from "react-redux";
 import { Action } from "redux";
+
+import { State } from "../../store/state";
 import { loadExchangeData } from "./LoadButton.store";
 
 import "./LoadButton.css";

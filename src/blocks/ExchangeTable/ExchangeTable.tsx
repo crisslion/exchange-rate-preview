@@ -1,9 +1,9 @@
 import * as React from "react";
 import { connect } from "react-redux";
 
-import { ExchangeTableStoreData } from "./ExchangeTable.store";
 import { CurrencyBlock } from "../../components/CurrencyBlock/CurrencyBlock";
 import { State } from "../../store/state";
+import { ExchangeTableStoreData } from "./ExchangeTable.store";
 
 import "./ExchangeTable.css";
 
@@ -16,11 +16,11 @@ export class ExchangeTableBare extends React.PureComponent<ExchangeTableStatePro
         const { rates } = this.props.data;
         const blocks = [];
 
-        for(let rate in rates) {
+        for (const rate of Object.keys(rates)) {
             blocks.push(
                 <div key={rate} className="exchange-table__data-block">
                     <CurrencyBlock name={rate} value={rates[rate]} />
-                </div>
+                </div>,
             );
         }
         return blocks;

@@ -11,17 +11,17 @@ export interface ExchangeData {
 }
 
 export class ApiService {
-    static getExchangeData(): Promise<ExchangeData> {
+    public static getExchangeData(): Promise<ExchangeData> {
         return fetch("https://api.exchangeratesapi.io/latest")
             .then((response) => {
-        		if (response.ok) {
-        			return response.json();
-        		} else {
-        			return Promise.reject({
-        				status: response.status,
-        				statusText: response.statusText
-        			});
-        		}
-        	});
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    return Promise.reject({
+                        status: response.status,
+                        statusText: response.statusText,
+                    });
+                }
+            });
     }
 }

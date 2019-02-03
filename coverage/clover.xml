@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1549177624582" clover="3.2.0">
-  <project timestamp="1549177624583" name="All files">
+<coverage generated="1549179522705" clover="3.2.0">
+  <project timestamp="1549179522705" name="All files">
     <metrics statements="94" coveredstatements="93" conditionals="19" coveredconditionals="17" methods="25" coveredmethods="21" elements="138" coveredelements="131" complexity="0" loc="94" ncloc="94" packages="9" files="12" classes="12">
       <package name="exchange-rate-preview">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -36,7 +36,7 @@
           <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
           <line num="1" count="2" type="stmt"/>
           <line num="2" count="2" type="stmt"/>
-          <line num="5" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
           <line num="8" count="2" type="stmt"/>
           <line num="14" count="2" type="stmt"/>
           <line num="16" count="3" type="stmt"/>
@@ -68,13 +68,13 @@
           <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
           <line num="1" count="2" type="stmt"/>
           <line num="4" count="2" type="stmt"/>
-          <line num="6" count="2" type="stmt"/>
           <line num="8" count="2" type="stmt"/>
-          <line num="14" count="2" type="stmt"/>
+          <line num="10" count="2" type="stmt"/>
           <line num="16" count="2" type="stmt"/>
-          <line num="28" count="2" type="stmt"/>
-          <line num="29" count="0" type="stmt"/>
-          <line num="32" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
         </file>
       </package>
       <package name="exchange-rate-preview.src.blocks.Notifications">
@@ -103,14 +103,14 @@
           <line num="1" count="2" type="stmt"/>
           <line num="2" count="2" type="stmt"/>
           <line num="4" count="2" type="stmt"/>
-          <line num="6" count="2" type="stmt"/>
-          <line num="20" count="2" type="stmt"/>
-          <line num="22" count="4" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
           <line num="23" count="4" type="stmt"/>
-          <line num="27" count="4" type="stmt"/>
-          <line num="35" count="2" type="stmt"/>
-          <line num="41" count="2" type="stmt"/>
-          <line num="45" count="2" type="stmt"/>
+          <line num="24" count="4" type="stmt"/>
+          <line num="28" count="4" type="stmt"/>
+          <line num="36" count="2" type="stmt"/>
+          <line num="42" count="2" type="stmt"/>
+          <line num="46" count="2" type="stmt"/>
         </file>
       </package>
       <package name="exchange-rate-preview.src.components.CurrencyBlock">

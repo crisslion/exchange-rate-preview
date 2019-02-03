@@ -1,20 +1,19 @@
 import {
+    hideNotification,
+    initData,
     NotificationKind,
     NotificationsAction,
-    initData,
+    notificationsReducer,
     showNotification,
-    hideNotification,
-    notificationsReducer
 } from "./Notifications.store";
 
 describe("Notifications", () => {
     describe("showNotification", () => {
         test("has right type and props", () => {
-            const action = showNotification(NotificationKind.Notify, "test")
+            const action = showNotification(NotificationKind.Notify, "test");
             expect(action.type).toBe(NotificationsAction.Show);
             expect(action.kind).toBe(NotificationKind.Notify);
             expect(action.text).toBe("test");
-            
         });
     });
 
@@ -32,17 +31,17 @@ describe("Notifications", () => {
                 "test",
             ));
             expect(state).toEqual({
+                isShown: true,
                 kind: NotificationKind.Issue,
                 text: "test",
-                isShown: true,
             });
         });
         test("handles Hide Action correctly", () => {
             const state = notificationsReducer(initData, hideNotification());
             expect(state).toEqual({
+                isShown: false,
                 kind: NotificationKind.Notify,
                 text: "",
-                isShown: false,
             });
         });
         test("handles Default Action correctly", () => {

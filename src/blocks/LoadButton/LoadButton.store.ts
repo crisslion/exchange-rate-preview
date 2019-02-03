@@ -3,9 +3,9 @@ import { Dispatch } from "redux";
 import { ApiService, ExchangeData } from "../../services/api";
 import { updateExchangeData } from "../ExchangeTable/ExchangeTable.store";
 import {
-    showNotification,
-    NotificationKind,
     hideNotification,
+    NotificationKind,
+    showNotification,
 } from "../Notifications/Notifications.store";
 
 export const loadExchangeData = () => (dispatch: Dispatch) => {
@@ -19,5 +19,5 @@ export const loadExchangeData = () => (dispatch: Dispatch) => {
             dispatch(hideNotification());
         }).catch(() => {
             dispatch(showNotification(NotificationKind.Issue, "There was an error loading data!" ));
-        });;
+        });
 };

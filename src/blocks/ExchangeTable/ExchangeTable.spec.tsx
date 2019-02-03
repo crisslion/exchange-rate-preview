@@ -1,8 +1,8 @@
-import * as React from "react";
 import { shallow } from "enzyme";
+import * as React from "react";
 
-import { ExchangeTableBare } from "./ExchangeTable";
 import { CurrencyBlock } from "../../components/CurrencyBlock/CurrencyBlock";
+import { ExchangeTableBare } from "./ExchangeTable";
 
 describe("Exchange table", () => {
     const mockData = {

@@ -17,9 +17,9 @@ export interface NotificationsActionShow extends Action<NotificationsAction.Show
 
 export function showNotification(kind: NotificationKind, text: string): NotificationsActionShow {
     return {
-        type: NotificationsAction.Show,
         kind,
         text,
+        type: NotificationsAction.Show,
     };
 }
 
@@ -35,7 +35,7 @@ export interface NotificationsStoreData {
     readonly isShown: boolean;
     readonly kind: NotificationKind;
     readonly text: string;
-};
+}
 
 export const initData: NotificationsStoreData = {
     isShown: false,
@@ -46,21 +46,20 @@ export const initData: NotificationsStoreData = {
 export type NotificationsActions = NotificationsActionShow | NotificationsActionHide;
 
 export function notificationsReducer(state = initData, action: NotificationsActions) {
-    switch(action.type) {
+    switch (action.type) {
         case NotificationsAction.Show:
             return {
+                isShown: true,
                 kind: action.kind,
                 text: action.text,
-                isShown: true,
             };
         case NotificationsAction.Hide:
             return {
+                isShown: false,
                 kind: NotificationKind.Notify,
                 text: "",
-                isShown: false,
             };
         default:
             return state;
     }
 }
- 

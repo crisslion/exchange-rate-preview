@@ -1,5 +1,5 @@
-import * as React from "react";
 import { shallow } from "enzyme";
+import * as React from "react";
 
 import { NotificationsBare } from "./Notifications";
 import { NotificationKind } from "./Notifications.store";
@@ -12,7 +12,7 @@ describe("Notifications", () => {
                 text={"test"}
                 isShown={true}
                 hideNotification={jest.fn()}
-            />
+            />,
         );
 
         expect(notifications.text()).toBe("test");
@@ -25,7 +25,7 @@ describe("Notifications", () => {
                 text={"test"}
                 isShown={false}
                 hideNotification={jest.fn()}
-            />
+            />,
         );
 
         expect(notifications.text()).not.toBe("test");
@@ -38,7 +38,7 @@ describe("Notifications", () => {
                 text={"test"}
                 isShown={true}
                 hideNotification={jest.fn()}
-            />
+            />,
         );
         expect(notifications.find(".notification--notify")).toHaveLength(1);
     });
@@ -50,7 +50,7 @@ describe("Notifications", () => {
                 text={"test"}
                 isShown={true}
                 hideNotification={jest.fn()}
-            />
+            />,
         );
         expect(notifications.find(".notification--issue")).toHaveLength(1);
     });

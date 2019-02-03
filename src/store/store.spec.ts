@@ -1,18 +1,15 @@
-import { Action, Store, Dispatch } from "redux";
+import { Action, Dispatch } from "redux";
 import { createReduxStore, Reducers } from "./store";
 
 type TestAction = Action<"TEST">;
 
 describe("Store", () => {
     describe("createReduxStore", () => {
-        const action: TestAction = {
-            type: "TEST",
-        };
         const defaultState = 1;
         const reducers: Reducers = {
-            foo: (store = defaultState, action: TestAction) => action.type === "TEST" ? store + 1 : store,
+            foo: (state = defaultState, action: TestAction) => action.type === "TEST" ? state + 1 : state,
         };
-        let store: Store;
+        let store: any;
 
         beforeEach(() => {
             store = createReduxStore<typeof defaultState, TestAction>(reducers);
@@ -25,7 +22,7 @@ describe("Store", () => {
         });
 
         test("Have thunk ability", (done) => {
-            const store = createReduxStore(reducers);
+            store = createReduxStore(reducers);
 
             store.subscribe(() => {
                 if (store.getState().foo >= 2) {

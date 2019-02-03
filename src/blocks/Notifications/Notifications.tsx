@@ -1,12 +1,13 @@
 import * as React from "react";
 import { connect } from "react-redux";
 
-import { hideNotification, NotificationKind } from "./Notifications.store";
-import { State } from "../../store/state";
 import "./Notifications.css";
+import { hideNotification, NotificationKind } from "./Notifications.store";
+
+import { State } from "../../store/state";
 
 export interface NotificationsStateProps {
-    kind: NotificationKind,
+    kind: NotificationKind;
     isShown: boolean;
     text: string;
 }
@@ -33,8 +34,8 @@ export class NotificationsBare extends React.PureComponent<NotificationsProps> {
 }
 
 const mapStateToProps = (state: State) => ({
-    kind: state.notifications.kind,
     isShown: state.notifications.isShown,
+    kind: state.notifications.kind,
     text: state.notifications.text,
 });
 

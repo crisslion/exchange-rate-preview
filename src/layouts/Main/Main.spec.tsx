@@ -1,10 +1,10 @@
-import * as React from "react";
 import { shallow } from "enzyme";
+import * as React from "react";
 
-import { MainLayout } from "./Main";
-import { Notifications } from "../../blocks/Notifications/Notifications";
-import { LoadButton } from "../../blocks/LoadButton/LoadButton";
 import { ExchangeTable } from "../../blocks/ExchangeTable/ExchangeTable";
+import { LoadButton } from "../../blocks/LoadButton/LoadButton";
+import { Notifications } from "../../blocks/Notifications/Notifications";
+import { MainLayout } from "./Main";
 
 describe("Main layout", () => {
     test("Should render notification component", () => {

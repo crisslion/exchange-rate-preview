@@ -28,16 +28,16 @@ describe("Load Button store", () => {
         test("Dispatches show notification action", () => {
             loadExchangeData()(dispatch);
             expect(dispatch).toBeCalledWith({
-                type: NotificationsAction.Show,
                 kind: NotificationKind.Notify,
                 text: "Loading data from server",
+                type: NotificationsAction.Show,
             });
         });
 
         test("Dispatches hide notification action", (done) => {
             loadExchangeData()(dispatch).then(() => {
                 expect(dispatch).toBeCalledWith({
-                    type: NotificationsAction.Hide
+                    type: NotificationsAction.Hide,
                 });
                 done();
             });
@@ -47,9 +47,9 @@ describe("Load Button store", () => {
             ApiServiceMock.getExchangeData = badGetExchangeData;
             loadExchangeData()(dispatch).then(() => {
                 expect(dispatch).toBeCalledWith({
-                    type: NotificationsAction.Show,
                     kind: NotificationKind.Issue,
                     text: "There was an error loading data!",
+                    type: NotificationsAction.Show,
                 });
                 done();
             });

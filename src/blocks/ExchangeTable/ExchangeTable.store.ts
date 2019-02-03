@@ -12,8 +12,8 @@ export interface ExchangeTableActionUpdate extends Action<ExchangeTableAction.Up
 
 export function updateExchangeData(data: ExchangeData): ExchangeTableActionUpdate {
     return {
-        type: ExchangeTableAction.Update,
         data,
+        type: ExchangeTableAction.Update,
     };
 }
 
@@ -28,7 +28,7 @@ export const initData: ExchangeTableStoreData = {
 export type ExchangeTableActions = ExchangeTableActionUpdate;
 
 export function exchangeTableReducer(state = initData, action: ExchangeTableActions) {
-    switch(action.type) {
+    switch (action.type) {
         case ExchangeTableAction.Update:
             return action.data;
         default:

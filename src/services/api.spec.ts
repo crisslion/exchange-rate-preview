@@ -1,6 +1,6 @@
 const fetchMock = {
-    ok: true,
     json: () => ({ data: "" }),
+    ok: true,
 };
 
 jest.mock("../global", () => ({
@@ -9,8 +9,8 @@ jest.mock("../global", () => ({
 
 import {
     ApiService,
-    ExchangeDataRates,
     ExchangeData,
+    ExchangeDataRates,
 } from "./api";
 
 describe("Api service", () => {
@@ -18,7 +18,7 @@ describe("Api service", () => {
         test("Returns a promise", () => {
             const promise = ApiService.getExchangeData();
             expect(promise).toBeInstanceOf(Promise);
-        })
+        });
 
         test("Returns data from promise as an object", (done) => {
             ApiService.getExchangeData().then((data) => {

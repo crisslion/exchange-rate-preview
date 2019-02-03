@@ -1,8 +1,8 @@
 import {
-    updateExchangeData,
     ExchangeTableAction,
     exchangeTableReducer,
     initData,
+    updateExchangeData,
 } from "./ExchangeTable.store";
 
 describe("Exchange table", () => {
